@@ -107,6 +107,49 @@ public class comman extends Farm{
     	 }
     	 
      }
+     public float pokeball() {
+    	 int a;
+    	 Scanner sc = new Scanner(System.in);
+    	 do {
+    	 System.out.print("Select PokeBall.\n1.PokeBall\n2.GreatBall\n3.UltraBall\n");
+    	 a = sc.nextInt();
+    	 switch(a) {
+    	 case(1):return 0.8f;
+    	 case(2):return 0.9f;
+    	 case(3):return 1.0f;
+    	 }}while(a==1||a==2||a==3);
+    	 
+    	 return 0.0f;
+     }
+     public void wildPokemon() {
+    	 Scanner sc = new Scanner(System.in);
+    	 String s = pokemonName(getType());
+    	 System.out.println("Meet the Jungle Pokémon!! ==> "+s+"!!!\nCatch pokemon?\nN/Y");
+    	 String ss = sc.nextLine();
+    	 if(ss.equals("Y")||ss.equals("y")) {
+    		 float Moot = (float) (Math.random()*1); 
+    		 float a = Moot*pokeball();
+    		 if(a>0.5f) {
+    			 System.out.println("Catch Pokemon successfully");
+    			 System.out.println("Keep in a bag\nN/Y");
+    			 ss = sc.nextLine();
+    	    	 if(ss.equals("Y")||ss.equals("y")) {
+    	    		 System.out.print("Name : ");
+    	        	 ss = sc.nextLine();
+    	             name.add(ss);
+    	             float wr = 5+(float)(Math.random()*(80));
+    	             Weight.add(wr);
+    	             String Type = getType();
+    	             type.add(Type);
+    	             pokemon.add(s);
+    	             Evo.add(0);
+    	    	 }
+    			 
+    		 }else System.out.println("Pokemon is run!!");
+    		 
+    	 }else System.out.println("Pokemon is run!!");
+     }
+     
 }
        
        

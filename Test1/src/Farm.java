@@ -7,7 +7,7 @@ public class Farm extends Pokemon{
 		comman c = new comman();
 	    	   int a;
 	    	do {
-	    		 System.out.print("Choose 1.PokemonFarm 2.Walk-Run 3.Food 4.List Pokemon  5.Exit\n");
+	    		 System.out.print("Choose 1.PokemonFarm 2.Walk-Run 3.Food 4.List Pokemon  5.Wild Pokemon 6.Exit\n");
 	    		 Scanner sc = new Scanner(System.in);
 	    		 a = sc.nextInt();
 	       if(a==1){
@@ -43,9 +43,11 @@ public class Farm extends Pokemon{
 	       else if(a==4) {
 	           c.LisePokemon();
 	       }
-	       
+	       else if(a==5) {
+	    	   c.wildPokemon();
+	       }
 		
-	} while(a!=5);}
+	} while(a!=6);}
 	}
     
 
